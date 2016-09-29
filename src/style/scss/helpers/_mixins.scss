@@ -1,0 +1,6 @@
+@mixin opacity-fade($time) {
+    transition: opacity $time ease-in-out;
+    -moz-transition: opacity $time ease-in-out;
+    -ms-transition: opacity $time ease-in-out;
+    -webkit-transition: opacity $time ease-in-out;
+}

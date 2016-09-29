@@ -1,0 +1,20 @@
+{
+  "name": "Standard",
+  "version": "1.0.1",
+  "description": "Standard gulp setup",
+  "main": "gulpfile.js",
+  "keywords": [],
+  "author": "Tristan van der Linden, Leroy Manshande",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tristanvdl/Yukon-website/issues"
+  },
+  "homepage": "https://github.com/tristanvdl/Yukon-website#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^2.0.12",
+    "gulp-concat": "^2.6.0",
+    "gulp-sass": "^2.3.2",
+    "gulp-uglify": "^2.0.0"
+  }
+}
