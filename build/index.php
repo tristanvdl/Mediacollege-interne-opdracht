@@ -6,7 +6,7 @@ $action = isset($_GET['page']) ? $_GET['page'] : 'homepage';
 
 include 'views/header.php';
 switch ($action) {
-    case 'home':
+    default:
         include 'views/home.php';
         break;
 }

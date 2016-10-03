@@ -1,0 +1,27 @@
+strong {
+  font-weight:bold;
+}
+
+.menu {
+  height:250px;
+  width:100%;
+  position:fixed;
+  top:0px;
+  left:0px;
+
+  .menuimg {
+    max-height:100%;
+    width:auto;
+  }
+
+  .topbar {
+    text-align:center;
+    font-size:1.64em;
+    position:fixed;
+    top: 100px;
+    left:35%;
+  }
+
+
+
+}
