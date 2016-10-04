@@ -35,11 +35,14 @@ class Database
         return self::$_instance;
     }
 
-    public function getAll($table)
+    public function SearchJSONEnc($table,$value)
     {
-        $statement = $this->db->prepare("select * from $table");
+        $key = $_GET[$value];
+        $statement = $this->db->prepare("select dienst from $table WHERE dienst LIKE '%{$key}%' ");
         $statement->execute();
-        $row = $statement->fetchAll(PDO::FETCH_ASSOC);
-        return $row;
+        while($result = $statement->fetchAll(PDO::FETCH_ASSOC)){
+            for ($i = 0; $i < count($result); $i++ )
+            echo '<a href="#">'.$result[$i]['dienst'].'</a><br>';
+        }
     }
 }
