@@ -35,7 +35,7 @@ class Database
         return self::$_instance;
     }
 
-    public function SearchJSONEnc($table,$value)
+    public function SearchItems($table,$value)
     {
         $key = $_GET[$value];
         $statement = $this->db->prepare("select dienst from $table WHERE dienst LIKE '%{$key}%' ");

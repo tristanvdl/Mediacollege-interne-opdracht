@@ -7,4 +7,4 @@
  */
 include '../models/Database.php';
 $database = new Database();
-echo $database->SearchJSONEnc('procedures','q');
+echo $database->SearchItems('procedures','q');
