@@ -1,3 +1,13 @@
+@font-face {
+    font-family: "Akzid-bold";
+    src: url(../fonts/Akzid-Grotesk/Grotesk-49030503.otf);
+}
+
+@font-face {
+    font-family: "Akzid";
+    src: url(../fonts/Akzid-Grotesk/Grotesk-49030501.otf);
+}
+
 strong {
   font-weight:bold;
 }
@@ -21,6 +31,11 @@ strong {
     top: 50px;
     left:0px;
     width:100%;
+    font-family:"Akzid";
+    strong  {
+      font-family:"Akzid-bold";
+      color:$mapink;
+    }
   }
 
 
