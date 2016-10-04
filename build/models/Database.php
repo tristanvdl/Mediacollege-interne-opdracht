@@ -9,27 +9,30 @@
 
 class Database
 {
-    private $db_host;
-    private $db_password;
-    private $db_name;
-    private $db_user;
     private $db;
+    private $error;
+    private static $_instance = null;
 
-    public function __construct($host, $password, $name, $user)
+    public function __construct()
     {
-        $this->db_host = $host;
-        $this->db_name = $name;
-        $this->db_password = $password;
-        $this->db_user = $user;
         try
         {
-            $this->db = new PDO('mysql:host=' . $host . ';dbname=' . $name . '', $user, $password);
+            $this->db = new PDO('mysql:host=localhost;dbname=procedures_ma', 'root', '');
         }
         catch(PDOException $e)
         {
-            $this->error = $e->getMessage();
+            $this->error = die($e->getMessage());
         }
         return $this->db;
+    }
+
+    public static function getInstance()
+    {
+        if (!isset(self::$_instance))
+        {
+            self::$_instance = new Database();
+        }
+        return self::$_instance;
     }
 
     public function getAll($table)
