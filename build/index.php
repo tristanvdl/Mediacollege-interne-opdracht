@@ -4,8 +4,6 @@ Autoload::register();
 
 Database::getInstance();
 
-
-
 $action = isset($_GET['page']) ? $_GET['page'] : 'homepage';
 
 
