@@ -3,9 +3,9 @@ strong {
 }
 
 .menu {
-  height:250px;
+  height:$menuheight;
   width:100%;
-  position:fixed;
+  position:absolute;
   top:0px;
   left:0px;
 
@@ -16,12 +16,16 @@ strong {
 
   .topbar {
     text-align:center;
-    font-size:1.64em;
+    font-size:2em;
     position:fixed;
-    top: 100px;
-    left:35%;
+    top: 50px;
+    left:30%;
   }
 
 
 
+}
+
+.content {
+  margin-top:$menuheight;
 }
