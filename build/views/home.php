@@ -6,7 +6,7 @@
  * Time: 08:22
  */
 ?>
-<h1 class="searchtitle">Waarmee kunnen wij u helpen?</h1>
+<h1 class="pagetitle">Waarmee kunnen wij u helpen?</h1>
 <form class="searchform" method="post" action="?page=results">
 <i class="fa fa-search searchicon" aria-hidden="true"></i>
   <input type="text" name="searchq">
