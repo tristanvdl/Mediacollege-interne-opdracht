@@ -1,11 +1,12 @@
+
+
 .pagetitle {
   margin-top:25%;
-  font-size:3em;
-  font-weight:bold;
+  font-size:3.45em;
+  font-weight:bolder;
+  font-family:"Akzid-bold";
+  color:black;
 }
-
-
-
 
 .searchform {
   margin-top:3%;
@@ -20,6 +21,9 @@
     float:right;
   }
   input[type=text]{
+    outline: none;
+    font-size:2.5em;
+    font-family:"Akzid";
     width:70%;
     margin-left:15px;
     @media screen and (max-width:1400px){
