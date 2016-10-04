@@ -5,9 +5,6 @@
  * Date: 3-10-2016
  * Time: 08:22
  */
-$test = new Home();
-
-$test->test();
 ?>
 
 test
