@@ -1,0 +1,54 @@
+.searchtitle {
+  margin-top:25%;
+  font-size:3em;
+  font-weight:bold;
+}
+
+
+
+
+.searchform {
+  margin-top:3%;
+  height:70px;
+  background-color:#e2e2e2;
+  width:35%;
+  margin-left: auto;
+  margin-right:auto;
+  display:block;
+  button {
+    width:70px;
+    float:right;
+  }
+  input[type=text]{
+    width:70%;
+    margin-left:15px;
+    @media screen and (max-width:1400px){
+      & {
+        width:50%;
+      }
+    }
+  }
+  input[type=text], button {
+    height:100%;
+      border:none;
+      background-color:transparent;
+  }
+  .searchicon {
+    font-size:1.5em;
+    float:left;
+    margin-top:24px;
+    margin-left:30px;
+  }
+  .buttonicon {
+    font-size:2em;
+    margin-right:8px;
+  }
+}
+
+.searchtitle, .searchform {
+  text-align:center;
+}
+
+.content {
+
+}

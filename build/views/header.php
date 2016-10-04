@@ -1,22 +1,22 @@
-<?php
-/**
- * Created by IntelliJ IDEA.
- * User: tristan
- * Date: 3-10-2016
- * Time: 08:24
- */
-?>
-
 <!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Procedures</title>
+    <script src="http://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/app.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
 </head>
 <body>
 
-</body>
-</html>
+<div class="menu">
+  <a href="?page=home"><img src="assets/images/logosub.jpg" class="menuimg"></a>
+  <div class="topbar">
+    <strong>Spoedmelding?</strong> Bel direct naar: 020 1234567
+  </div>
+</div>
 
 
-
+<div class="content">
