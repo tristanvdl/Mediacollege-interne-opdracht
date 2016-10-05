@@ -4,6 +4,7 @@ $db = new Database();
 $item = $db->SingleItem('procedures');
 foreach ($item as $key) {
     ?>
+
     <div class="container resultcontent">
         <div class="wrapper_results resultcontentchild">
             <div class="row">
@@ -36,6 +37,7 @@ foreach ($item as $key) {
             </div>
         </div>
     </div>
+
     <?php
 }
 ?>
