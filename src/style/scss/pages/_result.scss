@@ -1,0 +1,32 @@
+
+
+
+
+.resultcontent {
+    display:table;
+    width: 70vw;
+    height:100vh;
+    .columntitle {
+        font-family: "Akzid-bold";
+        font-weight: bold;
+        color: black;
+        padding-bottom: 5px;
+    }
+    .resultcontentchild {
+        display:table-cell;
+        vertical-align: middle;
+    }
+    .pagetitle {
+      text-align:center;
+      font-size:2.5em;
+      font-weight:bolder;
+      font-family:"Akzid-bold";
+      color:$mapink;
+      padding-bottom: 20px;
+    }
+    .omschrijving , .aanvragen , .link , .levertijd {
+        font-family: "Akzid";
+        font-size: 1.4em;
+        padding-bottom: 20px;
+    }
+}
