@@ -22,12 +22,7 @@
     outline: none;
     font-family: 'Akzid';
     font-size:2.5em;
-    width:85%;
-    @media screen and (max-width:1400px){
-      & {
-        width:50%;
-      }
-    }
+    width: 512px;
   }
   input[type=text], button {
     height:100%;
@@ -48,12 +43,13 @@
     border-right: 1px solid #e2e2e2;
     display: none;
     padding: 10px;
+    margin-bottom: 15px;
     a {
       display: inline-block;
       text-decoration: none;
       font-size:2.5em;
       color: black;
-
+      padding-bottom: 15px;
       width: 500px;
       margin-left: 62px;
     }
