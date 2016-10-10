@@ -13,10 +13,10 @@
 <body>
 
 <div class="menu">
-  <a href="?page=home"><img src="assets/images/logosub.jpg" class="menuimg"></a>
-  <div class="topbar">
-    <strong>Spoedmelding?</strong> Bel direct naar: 020 1234567
-  </div>
+    <a href="?page=home"><img src="assets/images/logosub.jpg" class="menuimg"></a>
+    <div class="topbar">
+        <strong>Spoedmelding?</strong> Bel direct naar: 020 1234567
+    </div>
 </div>
 
 <div class="content">

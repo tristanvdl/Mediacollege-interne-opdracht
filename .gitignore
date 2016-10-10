@@ -1,4 +1,5 @@
 node_modules/
-build/css/app.css
-build/js/
+build/assets/css/app.css
+build/assets/js/
 .idea/
+.gitignore
