@@ -1,8 +1,9 @@
 <?php
+$singleItem = new ProcedureSearch($con);
+$pushData = new Ticket($con);
+$item = $singleItem->SingleItem('procedures');
+$keys = $pushData->PushTicketData();
 
-$db = new Database();
-$item = $db->SingleItem('procedures');
-$_keys = $db->PushTicketData();
 foreach ($item as $key) {
     ?>
     <div class="container result-content">

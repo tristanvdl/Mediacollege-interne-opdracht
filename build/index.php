@@ -1,7 +1,9 @@
 <?php
 include 'models/Autoload.php';
 Autoload::register();
-Database::getInstance();
+
+$db = Database::getInstance();
+$con = $db->getDB();
 
 $action = isset($_GET['page']) ? $_GET['page'] : 'homepage';
 
@@ -10,6 +12,10 @@ switch ($action) {
     case 'result':
       include 'views/result.php';
       break;
+
+    case 'admin_cms':
+        include 'views/cms.php';
+        break;
 
     default:
         include 'views/home.php';

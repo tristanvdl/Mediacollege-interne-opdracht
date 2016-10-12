@@ -1,10 +1,7 @@
 <?php
-/**
- * Created by IntelliJ IDEA.
- * User: Tristan
- * Date: 4-10-2016
- * Time: 16:31
- */
 include '../models/Database.php';
-$database = new Database();
-echo $database->SearchItems('procedures','q');
+include '../models/ProcedureSearch.php';
+$database = Database::getInstance();
+$con = $database->getDB();
+$searchData = new ProcedureSearch($con);
+echo $searchData->SearchItems('procedures','q');
