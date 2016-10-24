@@ -2,7 +2,7 @@
     display:table;
     width: 65vw;
     height:100vh;
-  font-size: 1.2em;
+    font-size: 1.2em;
     .columntitle {
         font-family: "Akzid-bold";
         font-weight: bold;
@@ -20,6 +20,21 @@
       font-family:"Akzid-bold";
       color:$mapink;
       padding-bottom: 40px;
+      span {
+        color: white;
+        background-color: $mapink;
+        width: 200px;
+        height: 60px;
+        display: inline-block;
+        left: 20px;
+        position: relative;
+        top: -21px;
+        p {
+          font-size: 0.6em;
+          position: inherit;
+          top: 15px;
+        }
+      }
     }
     .omschrijving , .aanvragen , .link , .levertijd {
         font-family: "Akzid";

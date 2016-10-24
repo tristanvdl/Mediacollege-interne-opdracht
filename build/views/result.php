@@ -1,32 +1,32 @@
 <?php
-$singleItem = new ProcedureSearch($con);
+$singleItem = new Procedure($con);
 $pushData = new Ticket($con);
-$item = $singleItem->SingleItem('procedures');
+$item = $singleItem->SingleProcedure('procedures','result','id',$_GET);
 $keys = $pushData->PushTicketData();
 
-foreach ($item as $key) {
     ?>
     <div class="container result-content">
         <div class="wrapper_results resultcontentchild">
             <div class="row">
-                <h1 class="pagetitle restitle"><?php echo $key['dienst'] ?></h1>
-
+                <div class="col-md-12 pagetitle restitle">
+                    <h1><?php echo $item['dienst'] ?><a href="?page=admin_cms&ticket_id=<?php echo $_GET['result']; ?>"><span><p>Bewerken</p></span></a></h1>
+                </div>
                 <div class="omschrijving col-md-5">
                     <h2 class="columntitle">Omschrijving</h2>
-                    <?php echo $key['omschrijving'] ?>
+                    <?php echo $item['omschrijving'] ?>
                 </div>
 
                 <div class="col-md-2"></div>
 
                 <div class="aanvragen col-md-5">
                     <h2 class="columntitle">Aanvragen</h2>
-                    <?php echo $key['aanvragen'] ?>
+                    <?php echo $item['aanvragen'] ?>
                 </div>
             </div>
             <div class="row">
                 <div class="levertijd col-md-5">
                     <h2 class="columntitle">Levertijd</h2>
-                    <?php echo $key['levertijd'] ?>
+                    <?php echo $item['levertijd'] ?>
                 </div>
 
                 <div class="col-md-2"></div>
@@ -60,15 +60,11 @@ foreach ($item as $key) {
                             <option value="2">Binnen een week</option>
                             <option value="3">Geen spoed</option>
                         </select><br>
-                        <input type="hidden" name="dienst" value="<?php echo $key['dienst'] ?>">
+                        <input type="hidden" name="dienst" value="<?php echo $item['dienst'] ?>">
                         <input type="submit">
                     </form>
                 </div>
             </div>
         </div>
     </div>
-    <?php
-}
-?>
-<!-- Modal -->
 

@@ -1,12 +1,5 @@
 <?php
 
-/**
- * Created by IntelliJ IDEA.
- * User: trist
- * Date: 30-9-2016
- * Time: 09:39
- */
-
 class Database
 {
     private $db;

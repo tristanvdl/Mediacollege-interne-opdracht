@@ -1,11 +1,5 @@
 <?php
 
-/**
- * Created by IntelliJ IDEA.
- * User: trist
- * Date: 12-10-2016
- * Time: 10:17
- */
 class Ticket
 {
     private $db;
@@ -49,7 +43,6 @@ class Ticket
         'Henkie Henk',
         '$keys[5]')
         ");
-
         $result = $statement->execute();
         return $result;
     }

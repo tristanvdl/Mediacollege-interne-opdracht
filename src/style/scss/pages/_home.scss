@@ -1,17 +1,31 @@
 .home_page {
   display: table;
-  width: 100vw  ;
   height:100vh;
+  margin: 0 auto;
   .search_wrapper {
     display: table-cell;
     vertical-align: middle;
-    .pagetitle {
+    .page-title-home {
       text-align:center;
-      font-size:3.45em;
+      font-size:3.5em;
       font-weight:bolder;
       font-family:"Akzid-bold";
-      color:black;
-      margin-bottom: 15px;
+      padding-bottom: 10px;
+      span {
+        color: white;
+        background-color: $mapink;
+        width: 200px;
+        height: 60px;
+        display: inline-block;
+        left: 20px;
+        position: relative;
+        top: -21px;
+        p {
+          font-size: 0.6em;
+          position: inherit;
+          top: 13px;
+        }
+      }
     }
     .searchform {
       text-align:center;
