@@ -17,6 +17,10 @@ switch ($action) {
         include 'views/cms.php';
         break;
 
+    case 'ticket':
+        include 'views/ticket.php';
+        break;
+
     default:
         include 'views/home.php';
         break;
