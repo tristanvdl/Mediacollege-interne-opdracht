@@ -41,46 +41,7 @@
         font-size: 1.4em;
         padding-bottom: 40px;
     }
-  .button_aanvragen {
-    .result-button {
-      background-color: $mapink;
-      font-family: Akzid;
-      font-weight: bold;
-      display: inline-block;
-      font-size: 1.2em;
-      width: 280px;
-      height: 60px;
-      border-radius: 0px;
-      border-color: inherit;
-      p {
-        position: relative;
-        top: 18px;
-        left: 33px;
-        color: white;
-        font-family: Akzid;
-        font-weight: bold;
-      }
-      &:focus {outline:0;
-        background-color: $mapink}
 
-      .result-arrow {
-        border-left:1px solid black;
-        float: right;
-        position: relative;
-        top: -23px;
-        height: 100%;
-        left: 10px;
-        padding: 7px;
-        padding-top: 8px;
-        color: white;
-        width: 60px;
-        background-color: $mapink;
-      }
-    }
-    &:hover {
-      cursor: pointer;
-    }
-  }
   @media screen and (max-width:1400px){
       & {
           font-size:.9em;
