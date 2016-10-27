@@ -43,7 +43,7 @@ $keys = $pushData->PushTicketData();
                     <h4 class="modal-title">Maak een ticket aan</h4>
                     <form action="?page=result&result=<?php echo $_GET['result']; ?>" method="post">
                         onderwerp
-                        <input type="text" name="onderwerp"><br>
+                        <input type="text" value="<?php echo $item['dienst'] ?>" name="onderwerp"><br>
                         beschrijving
                         <input type="text" name="beschrijving"><br>
                         Locatie
