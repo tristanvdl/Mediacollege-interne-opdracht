@@ -1,0 +1,92 @@
+.home_page {
+  display: table;
+  height:100vh;
+  margin: 0 auto;
+  .search_wrapper {
+    display: table-cell;
+    vertical-align: middle;
+    .page-title-home {
+      text-align:center;
+      font-size:3.5em;
+      font-weight:bolder;
+      font-family:"Akzid-bold";
+      padding-bottom: 10px;
+      span {
+        color: white;
+        background-color: $mapink;
+        width: 200px;
+        height: 60px;
+        display: inline-block;
+        left: 20px;
+        position: relative;
+        top: -21px;
+        p {
+          font-size: 0.6em;
+          position: inherit;
+          top: 13px;
+        }
+      }
+    }
+    .searchform {
+      text-align:center;
+      height:80px;
+      background-color:#e2e2e2;
+      width:600px;
+      margin-left: auto;
+      margin-right:auto;
+      display:block;
+      button {
+        width:70px;
+        float:right;
+      }
+      input[type=text]{
+        outline: none;
+        font-family: 'Akzid';
+        font-size:2.5em;
+        width: 512px;
+      }
+      input[type=text], button {
+        height:100%;
+        border:none;
+        background-color:transparent;
+      }
+      .searchicon {
+        font-size:2em;
+        float:left;
+        margin-top:22px;
+        margin-left:30px;
+      }
+      .results {
+        text-align: left;
+        font-family: 'Akzid';
+        border-bottom: 1px solid #e2e2e2;
+        border-left: 1px solid #e2e2e2;
+        border-right: 1px solid #e2e2e2;
+        display: none;
+        padding: 10px;
+        margin-bottom: 15px;
+        a {
+          display: inline-block;
+          text-decoration: none;
+          font-size:2.5em;
+          color: black;
+          padding-bottom: 15px;
+          width: 500px;
+          margin-left: 62px;
+        }
+        .icon-result{
+          position: relative;
+          font-size: 2em;
+          left:20px;
+          top: -5px;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+

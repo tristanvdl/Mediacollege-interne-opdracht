@@ -1,0 +1,64 @@
+
+strong {
+  font-weight:bold;
+}
+
+.menu {
+  height:$menuheight;
+  width:100%;
+  position:absolute;
+  top:0px;
+  left:0px;
+
+  .menuimg {
+    max-height:100%;
+    width:auto;
+  }
+  @media screen and (max-width:800px){
+      .menuimg {
+          max-height: 50%;
+      }
+      .topbar{
+          font-size:1em !important;
+          margin-left: 50px !important;
+      }
+  }
+  @media screen and (max-width:1200px){
+      .topbar{
+          font-size:1.6em !important;
+          margin-left:100px;
+          & strong {
+              display:block;
+          }
+    }
+  }
+    @media screen and (max-width:500px){
+        .topbar{
+            font-size:1.2em !important;
+            }
+
+    }
+    @media screen and (max-width:350px){
+        .topbar{
+            font-size:0.9em !important;
+            }
+
+    }
+
+  .topbar {
+    text-align:center;
+    font-size:2em;
+    position: absolute;
+    top: 50px;
+    left:0px;
+    width:100%;
+    font-family:"Akzid";
+    strong  {
+      font-family:"Akzid-bold";
+      color:$mapink;
+    }
+  }
+
+
+
+}

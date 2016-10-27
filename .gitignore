@@ -1,0 +1,4 @@
+node_modules/
+build/assets/css/app.css
+build/assets/js/
+.idea/

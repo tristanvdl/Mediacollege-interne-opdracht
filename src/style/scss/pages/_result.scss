@@ -1,0 +1,119 @@
+.result-content {
+    display:table;
+    width: 65vw;
+    height:100vh;
+    font-size: 1.2em;
+    .columntitle {
+        font-family: "Akzid-bold";
+        font-weight: bold;
+        color: black;
+        padding-bottom: 5px;
+    }
+    .resultcontentchild {
+        display:table-cell;
+        vertical-align: middle;
+    }
+    .pagetitle {
+      text-align:center;
+      font-size:2.5em;
+      font-weight:bolder;
+      font-family:"Akzid-bold";
+      color:$mapink;
+      padding-bottom: 40px;
+      span {
+        color: white;
+        background-color: $mapink;
+        width: 200px;
+        height: 60px;
+        display: inline-block;
+        left: 20px;
+        position: relative;
+        top: -21px;
+        p {
+          font-size: 0.6em;
+          position: inherit;
+          top: 15px;
+        }
+      }
+    }
+    .omschrijving , .aanvragen , .link , .levertijd {
+        font-family: "Akzid";
+        font-size: 1.4em;
+        padding-bottom: 40px;
+    }
+  .button_aanvragen {
+    .result-button {
+      background-color: $mapink;
+      font-family: Akzid;
+      font-weight: bold;
+      display: inline-block;
+      font-size: 1.2em;
+      width: 280px;
+      height: 60px;
+      border-radius: 0px;
+      border-color: inherit;
+      p {
+        position: relative;
+        top: 18px;
+        left: 33px;
+        color: white;
+        font-family: Akzid;
+        font-weight: bold;
+      }
+      &:focus {outline:0;
+        background-color: $mapink}
+
+      .result-arrow {
+        border-left:1px solid black;
+        float: right;
+        position: relative;
+        top: -23px;
+        height: 100%;
+        left: 10px;
+        padding: 7px;
+        padding-top: 8px;
+        color: white;
+        width: 60px;
+        background-color: $mapink;
+      }
+    }
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  @media screen and (max-width:1400px){
+      & {
+          font-size:.9em;
+          margin-top:50px;
+      }
+      .result-arrow{
+          margin-top:6px;
+      }
+  }
+  @media screen and (max-width:1150px){
+      & {
+          font-size:.9em;
+          margin-top:90px;
+      }
+  }
+  @media screen and (max-width:800px){
+      & {
+          font-size:.9em;
+          margin-top:140px !important;
+      }
+      .editspan {
+          max-width: 150px;
+          max-height: auto;
+      }
+  }
+  @media screen and (max-width:900px) and (min-width:700px){
+      & {
+          margin-top:0px !important;
+          //background-color: black;
+          .omschrijving, .aanvragen, .levertijd {
+              font-size: 2em;
+          }
+
+      }
+  }
+  }
