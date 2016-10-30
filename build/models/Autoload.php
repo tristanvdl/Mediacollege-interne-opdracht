@@ -1,11 +1,5 @@
 <?php
-
-/**
- * Created by IntelliJ IDEA.
- * User: trist
- * Date: 3-10-2016
- * Time: 09:13
- */
+//Autoloads all classes
 class Autoload
 {
 
