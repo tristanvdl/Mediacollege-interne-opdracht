@@ -49,7 +49,6 @@ class Ticket
         $statement->bindParam(":specifieke_locatie",$keys[3],PDO::PARAM_STR);
         $statement->bindParam(":spoed",$keys[4],PDO::PARAM_STR);
         $statement->bindParam(":dienst",$keys[5],PDO::PARAM_STR);
-
         return  $statement->execute() ? true : false;
     }
 }

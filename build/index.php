@@ -7,7 +7,7 @@ $con = $db->getDB();
 
 $action = isset($_GET['page']) ? $_GET['page'] : 'homepage';
 
-include 'views/header.php';
+//include 'views/header.php';
 switch ($action) {
     case 'result':
       include 'views/result.php';
@@ -19,6 +19,10 @@ switch ($action) {
 
     case 'ticket':
         include 'views/ticket.php';
+        break;
+
+    case 'register':
+        include 'views/register.php';
         break;
 
     default:
