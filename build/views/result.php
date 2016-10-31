@@ -30,7 +30,7 @@ $item = $singleItem->SingleProcedure('procedures','result','id',$_GET);
                 <div class="col-md-2"></div>
 
                 <div class="button_aanvragen col-md-5">
-                    <a href="?page=ticket&dienst=<?php echo $item['dienst'] ?>"><span class="result-button" data-toggle="modal" data-target="#myModal"><p>Ticket Aanvragen</p><i class="fa fa-2x fa-long-arrow-right result-arrow" aria-hidden="true"></i></span></a>
+                    <a href="?page=ticket&dienst=<?php echo $item['dienst'] ?>"><span class="result-button" data-toggle="modal" data-target="#myModal"><p>Probleem melden</p><i class="fa fa-2x fa-long-arrow-right result-arrow" aria-hidden="true"></i></span></a>
                 </div>
             </div>
         </div>
