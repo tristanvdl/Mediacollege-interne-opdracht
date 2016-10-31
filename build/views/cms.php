@@ -42,9 +42,23 @@ if (isset($_POST['titel'])){
 
                     <div class="col-md-2"></div>
 
-                    <div class="button_aanvragen col-md-5">
+                    <!-- <div class="button_aanvragen col-md-5">
                         <button>Update<i class="fa fa-2x fa-long-arrow-right" aria-hidden="true"></i></button>
-                    </div>
+                    </div> -->
+
+
+                    <!-- action button -->
+                    <button class="actionbutton updatebutton">
+                        <div class="col-md-8 col-lg-8 col-sm-8">
+                            <p>
+                                <!-- <a href="#"> -->
+                                    Update
+                                <!-- </a> -->
+                        </p>
+                        </div>
+                      <i class=" col-lg-4 col-md-4 col-sm-4 fa fa-2x fa-long-arrow-right" aria-hidden="true"></i>
+                    </button>
+                    <!-- end action button -->
                 </div>
             </form>
         </div>
