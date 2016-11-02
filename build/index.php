@@ -1,4 +1,8 @@
 <?php
+session_start();
+echo $_SESSION['user'];
+echo "</br>";
+echo $_SESSION['user_level'];
 include 'models/Autoload.php';
 Autoload::register();
 
@@ -24,6 +28,10 @@ switch ($action) {
 
     case 'register':
         include 'views/register.php';
+        break;
+
+    case 'login':
+        include 'views/login.php';
         break;
 
     default:
