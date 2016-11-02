@@ -22,9 +22,7 @@ $keys = $pushData->PushTicketData();
                 <option value="3" class="spoedoption">Geen spoed</option>
             </select><br>
             <input type="hidden" name="dienst" value="">
-            <div class="button_aanvragen">
-                <span class="result-button createticket" onclick="myform.submit()"><p>Vraag aan</p><i class="fa fa-2x fa-long-arrow-right result-arrow" aria-hidden="true"></i></span>
-            </div>
+            <button form="cmsform" type="button" onclick="myform.submit()" class="aanvraagbutton btn btn-default actionbutton">Vraag aan</button>
         </form>
     </div>
 </div>
