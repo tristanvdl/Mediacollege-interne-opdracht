@@ -17,7 +17,7 @@ if (isset($_POST['titel'])){
 ?>
     <div class="container result-content">
         <div class="wrapper_results resultcontentchild">
-            <form method="post" action="?page=admin_cms&ticket_id=<?php echo $_GET['ticket_id']; ?>">
+            <form id="cmsform" method="post" action="?page=admin_cms&ticket_id=<?php echo $_GET['ticket_id']; ?>">
                 <div class="row">
                     <div class="col-md-12 pagetitle restitle">
                         <input name="titel" type="text" value="<?php echo $item['dienst'] ?>">
@@ -41,24 +41,7 @@ if (isset($_POST['titel'])){
                     </div>
 
                     <div class="col-md-2"></div>
-
-                    <!-- <div class="button_aanvragen col-md-5">
-                        <button>Update<i class="fa fa-2x fa-long-arrow-right" aria-hidden="true"></i></button>
-                    </div> -->
-
-
-                    <!-- action button -->
-                    <button class="actionbutton updatebutton">
-                        <div class="col-md-8 col-lg-8 col-sm-8">
-                            <p>
-                                <!-- <a href="#"> -->
-                                    Update
-                                <!-- </a> -->
-                        </p>
-                        </div>
-                      <i class=" col-lg-4 col-md-4 col-sm-4 fa fa-2x fa-long-arrow-right" aria-hidden="true"></i>
-                    </button>
-                    <!-- end action button -->
+                    <input type="submit" value="Update" class="btn btn-default actionbutton updatebutton">
                 </div>
             </form>
         </div>
@@ -92,9 +75,7 @@ if (isset($_POST['titel'])){
 
                         <div class="col-md-2"></div>
 
-                        <div class="button_aanvragen col-md-5">
-                            <button>Toevoegen<i class="fa fa-2x fa-long-arrow-right" aria-hidden="true"></i></button>
-                        </div>
+                        <button class="btn btn-primary actionbutton updatebutton">Toevoegen</button>
                     </div>
                 </form>
             </div>

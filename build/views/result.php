@@ -7,7 +7,7 @@ $item = $singleItem->SingleProcedure('procedures','result','id',$_GET);
         <div class="wrapper_results resultcontentchild">
             <div class="row">
                 <div class="col-md-12 pagetitle restitle">
-                    <h1><?php echo $item['dienst'] ?><a href="?page=admin_cms&ticket_id=<?php echo $_GET['result']; ?>"><span><p>Bewerken</p></span></a></h1>
+                    <h1><?php echo $item['dienst'] ?><a class="btn btn-primary actionbutton updatebutton" href="?page=admin_cms&ticket_id=<?php echo $_GET['result']; ?>">Bewerken</a></h1>
                 </div>
                 <div class="omschrijving col-md-5">
                     <h2 class="columntitle">Omschrijving</h2>
@@ -29,9 +29,7 @@ $item = $singleItem->SingleProcedure('procedures','result','id',$_GET);
 
                 <div class="col-md-2"></div>
 
-                <div class="button_aanvragen col-md-5">
-                    <a href="?page=ticket&dienst=<?php echo $item['dienst'] ?>"><span class="result-button" data-toggle="modal" data-target="#myModal"><p>Probleem melden</p><i class="fa fa-2x fa-long-arrow-right result-arrow" aria-hidden="true"></i></span></a>
-                </div>
+                <a class="btn btn-default actionbutton updatebutton" href="?page=ticket&dienst=<?php echo $item['dienst'] ?>">Probleem Melden</a>
             </div>
         </div>
     </div>
