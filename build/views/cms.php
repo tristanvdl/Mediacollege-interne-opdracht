@@ -1,16 +1,15 @@
 <?php
 $singleItem = new Procedure($con);
 $item = $singleItem->SingleProcedure('procedures','ticket_id', 'id',$_GET);
-
 if (isset($_POST['titel_new'])){
     $singleItem->addNewProcedure();
     $item2 = $singleItem->SingleProcedure('procedures','titel_new', 'dienst',$_POST);
-    header('Location: ?page=result&result='. $item2['id'] .'');
+    echo("<script>window.location.assign(\"?page=result&result=". $item2['id'] ."\")</script>");
 }
-
 if (isset($_POST['titel'])){
     $update = $singleItem->UpdateProcedure();
-    header('Location: ?page=result&result='. $_GET['ticket_id'] .'');
+    //header('Location: ?page=result&result='. $_GET['ticket_id'] .'');
+    echo("<script>window.location.assign(\"?page=result&result=". $_GET['ticket_id'] ."\")</script>");
 }
 ?>
 <?php

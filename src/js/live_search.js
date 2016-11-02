@@ -4,6 +4,7 @@ $(document).ready(function(e) {
         $.ajax({
             type:'GET',
             url:'../build/data/data.php',
+            //url:'data/data.php',
             data: 'q='+searchval,
             success:function(data) {
                 if (searchval != ""){
