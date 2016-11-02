@@ -23,10 +23,10 @@ class UserService
 
     public function checkUser()
     {
-        $checkUser = $this->db->prepare("SELECT * FROM users WHERE email = :email");
-        $checkUser->bindParam(':email',$this->email,PDO::PARAM_STR);
-        $checkUser->execute();
-        $result = $checkUser->fetch();
+        $statement = $this->db->prepare("SELECT * FROM users WHERE email = :email");
+        $statement->bindParam(':email',$this->email,PDO::PARAM_STR);
+        $statement->execute();
+        $result = $statement->fetch();
         return $result;
     }
 }

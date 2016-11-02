@@ -7,7 +7,7 @@ $con = $db->getDB();
 
 $action = isset($_GET['page']) ? $_GET['page'] : 'homepage';
 
-session_start();
+
 include 'views/header.php';
 switch ($action) {
     case 'result':
