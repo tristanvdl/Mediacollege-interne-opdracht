@@ -5,7 +5,7 @@ if (isset($_POST['submit_login'])) {
         $user = $userService->loginUser();
         echo "welkom " . $user[0];
     } else {
-        echo "je bestaat niet";
+        echo "Incorrect wachtwoord of email";
     }
 
 }
