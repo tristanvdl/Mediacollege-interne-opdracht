@@ -1,8 +1,5 @@
 <?php
 session_start();
-echo $_SESSION['user'];
-echo "</br>";
-echo $_SESSION['user_level'];
 include 'models/Autoload.php';
 Autoload::register();
 
@@ -12,7 +9,7 @@ $con = $db->getDB();
 $action = isset($_GET['page']) ? $_GET['page'] : 'homepage';
 
 
-include 'views/header.php';
+//include 'views/header.php';
 switch ($action) {
     case 'result':
       include 'views/result.php';

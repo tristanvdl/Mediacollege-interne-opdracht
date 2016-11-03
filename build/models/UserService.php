@@ -45,11 +45,11 @@ class UserService
     public function loginUser()
     {
         $user =  array(
-           'username' => $_SESSION['user'],
-            'user_level' => $_SESSION['user_level']
+           isset($_SESSION['user']) ? $_SESSION['user'] : '',
+           isset($_SESSION['user_level']) ? $_SESSION['user_level'] : ''
         );
-        $user['username'] = $this->email;
-        $user['user_level'] = $this->user_level;
+        $user[0] = $this->email;
+        $user[1] = $this->user_level;
         return $user;
     }
 }

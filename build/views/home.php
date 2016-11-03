@@ -9,7 +9,7 @@
                 <div class="col-md-12 page-title-home">
                     <h1>Waarmee kunnen wij u helpen?
                         <?php
-                        if ($_SESSION['user_level'] == 1) {
+                        if (isset($_SESSION['user_level']) && $_SESSION['user_level'] == 0) {
                             ?>
                             <a href="">
                                 <a href="?page=admin_cms&ticket_id=new" class="btn btn-primary actionbutton">
