@@ -9,6 +9,7 @@ $action = isset($_GET['page']) ? $_GET['page'] : 'homepage';
 
 session_start();
 include 'views/header.php';
+echo "<div class='content'>";
 switch ($action) {
     case 'result':
       include 'views/result.php';
@@ -30,4 +31,5 @@ switch ($action) {
         include 'views/home.php';
         break;
 }
+echo "</div>";
 include 'views/footer.php';

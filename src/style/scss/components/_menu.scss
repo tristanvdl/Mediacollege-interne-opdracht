@@ -20,7 +20,7 @@ strong {
       }
       .topbar{
           font-size:1em !important;
-          margin-left: 50px !important;
+          margin-left: 120px !important;
       }
   }
   @media screen and (max-width:1200px){
@@ -61,4 +61,12 @@ strong {
 
 
 
+}
+
+.content {
+    @media and screen (max-width: 800px){
+        & {
+
+        }
+    }
 }
