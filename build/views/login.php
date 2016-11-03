@@ -13,12 +13,27 @@ if ($action == "logout"){
    session_destroy();
 }
 ?>
-<div class="container">
-    <div class="row">
-        <form method="post" action="?page=login" autocomplete="off">
-            <input type="email" name="email">
-            <input type="password" name="password">
-            <input type="submit" name="submit_login">
+<!-- <div class="container">
+    <div class="row"> -->
+        <form method="post" action="?page=login" autocomplete="off" class="loginform">
+                <h1> Login </h1>
+                <table>
+                  <tr>
+
+                    <th class="iconth"><i class="fa fa-user" aria-hidden="true"></i></th>
+                    <th class="inputth"><input type="email" name="email" placeholder="Gebruikersnaam"></th>
+                  </tr>
+
+                  <tr class="seperator"></tr>
+
+                  <tr>
+                    <th class="iconth"><i class="fa fa-key" aria-hidden="true"></i></th>
+                    <th class="inputth"><input type="password" name="password" placeholder="Wachtwoord"></th>
+                  </tr>
+                </table>
+
+              <a href="#">Wachtwoord Vergeten?</a>
+            <input type="submit" name="submit_login" class="btn btn-primary actionbutton loginbutton" value="Log In">
         </form>
-    </div>
-</div>
+    <!-- </div>
+</div> -->

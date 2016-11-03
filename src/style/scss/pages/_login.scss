@@ -1,0 +1,65 @@
+.loginform {
+  font-family:"Akzid";
+  width:100vw;
+  height:100vh;
+  text-align:center;
+  margin-top:35vh;
+  color:black;
+  h1 {
+    margin-bottom:20px;
+    font-size:2.5em;
+    font-weight:bolder;
+    font-family:"Akzid-bold";
+  }
+  i {
+    font-size:2em;
+  }
+
+  input[type=email], input[type=password] {
+    border:none;
+    background-color:transparent;
+    outline:none;
+    height:70px;
+  }
+  input[type=email]::-webkit-input-placeholder, input[type=password]::-webkit-input-placeholder{
+    color:black;
+
+  }
+  a {
+    display:block;
+    margin-top:15px;
+    color:$mapink;
+    text-decoration:underline;
+    margin-left:300px;
+    margin-bottom:15px;
+    font-weight:bold;
+  }
+  table, tr, th {
+    //border:1px solid black;
+
+  }
+  table {
+    margin-left:auto;
+    margin-right:auto;
+  }
+  th {
+    background-color:#EEEEEE;
+  }
+  .seperator {
+    height:15px;
+  }
+  .iconth {
+    vertical-align:middle;
+    padding:15px;
+  }
+
+  .inputth, input[type=email], input[type=password]  {
+    width:400px;
+  }
+
+
+
+  .loginbutton {
+    width:200px;
+  }
+}
