@@ -21,7 +21,7 @@ if ($action == "logout"){
                   <tr>
 
                     <th class="iconth"><i class="fa fa-user" aria-hidden="true"></i></th>
-                    <th class="inputth"><input type="email" name="email" placeholder="Gebruikersnaam"></th>
+                    <th class="inputth"><input type="email" name="email" placeholder="E-mail"></th>
                   </tr>
 
                   <tr class="seperator"></tr>

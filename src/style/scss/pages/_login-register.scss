@@ -1,3 +1,7 @@
+.regform {
+  margin-left:-375px;
+}
+
 .loginform {
   font-family:"Akzid";
   width:100vw;
@@ -57,9 +61,15 @@
     width:400px;
   }
 
-
+  .mailwarning {
+    margin-bottom:10px;
+    color:$mapink;
+  }
 
   .loginbutton {
     width:200px;
+  }
+  .regbutton{
+    margin-top:15px;
   }
 }
