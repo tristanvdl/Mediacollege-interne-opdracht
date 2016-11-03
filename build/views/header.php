@@ -17,6 +17,16 @@
     <div class="topbar">
         <strong>Spoedmelding?</strong> Bel direct naar: 020 1234567
     </div>
+
+    <div class="userthingy">
+      <div class="textleft">
+        Gebruikersnaam
+        <a href="#">Uitloggen</a>
+      </div>
+      <div class="iconright">
+        <i class="fa fa-user" aria-hidden="true"></i>
+      </div>
+    </div>
 </div>
 
 <div class="content">
