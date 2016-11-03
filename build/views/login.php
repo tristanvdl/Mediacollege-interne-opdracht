@@ -7,10 +7,11 @@ if (isset($_POST['submit_login'])) {
     } else {
         echo "Incorrect wachtwoord of email";
     }
-
 }
-
-
+$action = isset($_GET['action']) ? $_GET['action'] : '';
+if ($action == "logout"){
+   session_destroy();
+}
 ?>
 <div class="container">
     <div class="row">
