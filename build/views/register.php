@@ -14,6 +14,9 @@
                     ?>
                     <h1>bestaat al</h1>
                     <?php
+                }
+                if ($_POST['password'] == "") {
+                    echo "voer een wachtwoord in";
                 } else {
                     $userService->registerUser();
                     echo 'succes!';
@@ -22,7 +25,7 @@
         }
         ?>
         <form method="post" action="?page=register" autocomplete="off">
-            <input type="email" name="email" >
+            <input type="email" name="email">
             <input type="password" name="password">
             <input type="submit" name="submit_register">
         </form>
