@@ -19,12 +19,15 @@
     </div>
 
     <div class="userthingy">
+      <div class="userwrapper">
       <div class="textleft">
-        Gebruikersnaam
+        <p>Gebruikersnaam<Br></p>
+
         <a href="#">Uitloggen</a>
       </div>
       <div class="iconright">
         <i class="fa fa-user" aria-hidden="true"></i>
+      </div>
       </div>
     </div>
 </div>

@@ -63,10 +63,54 @@ strong {
 
 }
 
-.content {
-    @media and screen (max-width: 800px){
-        & {
 
-        }
+
+// USER INFO
+.userthingy {
+  font-family: "Akzid";
+  width: 100%;
+  font-size: 20px;//background-color: lightgray;
+  height: 100px;
+  position: relative;
+  top: -99%;
+  @media screen and (max-width: 1200px){
+    top:133%;
+  }
+  @media screen and (max-width: 800px){
+    top:183%;
+  }
+  .userwrapper{
+    width: 200px;
+    float: right;
+    .textleft {
+      width: 150px;
+      line-height: 25px;
+      display: block;
+      //background-color: lightblue;
+      text-align: right;
+      p {
+
+      }
+      a {
+        text-decoration: underline;
+        color: $mapink;
+      }
+      a:hover {
+
+      }
     }
+    .iconright {
+      width: 50px;
+      float:right;
+      //background-color: lightgreen;
+      margin-top: -50px;
+      height: 25px;
+      font-size: 50px;
+      i {
+        margin-left: 5px;
+        color: black;
+      }
+    }
+  }
+
 }
