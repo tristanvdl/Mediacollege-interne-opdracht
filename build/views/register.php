@@ -18,13 +18,13 @@
                     echo "voer een wachtwoord in";
                 } else {
                     $userService->registerUser();
-                    echo 'succes!';
+                    echo("<script>window.location.assign(\"?page=login\")</script>");
                 }
             }
         }
         ?>
         <form method="post" action="?page=register" autocomplete="off" class="loginform regform">
-          <h1>Register</h1>
+          <h1>Registreren</h1>
           <table>
             <?php
             if(isset($noMaEmail) && $noMaEmail){
