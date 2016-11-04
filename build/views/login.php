@@ -3,7 +3,7 @@ if (isset($_POST['submit_login'])) {
     $userService = new UserService($con);
     if ($userService->checkCredentialUser()) {
         $user = $userService->loginUser();
-        echo "welkom " . $user[0];
+        echo("<script>window.location.assign(\"?page=home\")</script>");
     } else {
         echo "Incorrect wachtwoord of email";
     }
@@ -11,6 +11,7 @@ if (isset($_POST['submit_login'])) {
 $action = isset($_GET['action']) ? $_GET['action'] : '';
 if ($action == "logout"){
    session_destroy();
+    echo("<script>window.location.assign(\"?page=home\")</script>");
 }
 ?>
 <!-- <div class="container">
