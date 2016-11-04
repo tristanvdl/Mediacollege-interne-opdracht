@@ -32,7 +32,8 @@ if ($action == "logout"){
                   </tr>
                 </table>
 
-              <a href="#">Wachtwoord Vergeten?</a>
+              <a href="#" class="wwlink">Wachtwoord Vergeten?</a>
+              <a href="?page=register" class="reglink">Registeren</a>
             <input type="submit" name="submit_login" class="btn btn-primary actionbutton loginbutton" value="Log In">
         </form>
     <!-- </div>

@@ -1,5 +1,5 @@
 .regform {
-  margin-left:-375px;
+
 }
 
 .loginform {
@@ -34,10 +34,19 @@
     margin-top:15px;
     color:$mapink;
     text-decoration:underline;
-    margin-left:300px;
     margin-bottom:15px;
     font-weight:bold;
   }
+
+.wwlink {
+  margin-left:300px;
+
+}
+.reglink {
+  margin-top:-30px;
+  margin-left:-390px;
+}
+
   table, tr, th {
     //border:1px solid black;
 
@@ -71,5 +80,41 @@
   }
   .regbutton{
     margin-top:15px;
+  }
+}
+
+@media screen and (max-width:700px){
+  .loginform {
+    h1 {
+      font-size:2em;
+    }
+    .inputth, input[type=email], input[type=password]  {
+      width:300px;
+    }
+    .wwlink {
+      margin-left:200px;
+
+    }
+    .reglink {
+      margin-left:-290px;
+    }
+  }
+
+}
+@media screen and (max-width:450px){
+  .loginform {
+    h1 {
+      font-size:1.5em;
+    }
+    .inputth, input[type=email], input[type=password]  {
+      width:225px;
+    }
+    .wwlink {
+      margin-left:125px;
+
+    }
+    .reglink {
+      margin-left:-215px;
+    }
   }
 }

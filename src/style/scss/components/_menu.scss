@@ -19,32 +19,7 @@ strong {
       .menuimg {
           max-height: 50%;
       }
-      .topbar{
-          font-size:1em !important;
-          margin-left: 120px !important;
-      }
   }
-  @media screen and (max-width:1200px){
-      .topbar{
-          font-size:1.6em !important;
-          margin-left:100px;
-          & strong {
-              display:block;
-          }
-    }
-  }
-    @media screen and (max-width:500px){
-        .topbar{
-            font-size:1.2em !important;
-            }
-
-    }
-    @media screen and (max-width:350px){
-        .topbar{
-            font-size:0.9em !important;
-            }
-
-    }
 
   .topbar {
     text-align:center;
@@ -52,7 +27,31 @@ strong {
     position: absolute;
     top: 50px;
     left:0px;
-    width:100%;
+    width:100vw;
+    //margin-left:202px;
+    @media screen and (max-width:550px){
+      &{
+        font-size:1em !important;
+        margin-left:75px !important;
+      }
+    }
+    @media screen and (max-width:900px){
+      &{
+        font-size:1.4em !important;
+      }
+    }
+    @media screen and (max-width:800px){
+      &{
+        margin-left:101px;
+        width:85vw;
+        font-size:1.8em;
+      }
+    }
+    @media screen and (max-width:1200px){
+      & {
+        strong {display:block}
+      }
+    }
     font-family:"Akzid";
     strong  {
       font-family:"Akzid-bold";
@@ -82,7 +81,9 @@ strong {
       // transform: translateZ(0);
       // -webkit-transform: translateZ(0);
       margin-top:89vh;
+      height:50px;
     }
+
   }
   @media screen and (max-width: 800px){
     margin-top:107vh;

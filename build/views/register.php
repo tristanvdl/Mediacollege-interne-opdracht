@@ -1,5 +1,5 @@
-<div class="container">
-    <div class="row">
+<!-- <div class="container">
+    <div class="row"> -->
         <?php
         $userService = new UserService($con);
 
@@ -68,5 +68,5 @@
             <input type="submit" name="submit_login" class="btn btn-primary actionbutton loginbutton" value="Log In">
         </form> -->
         <!--  -->
-    </div>
-</div>
+    <!-- </div>
+</div> -->
