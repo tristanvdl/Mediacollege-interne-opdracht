@@ -8,7 +8,7 @@ $item = $singleItem->SingleProcedure('procedures', 'result', 'id', $_GET);
         <div class="row">
             <div class="col-md-12 pagetitle restitle">
                 <h1><?php echo $item['dienst'];
-                    if (isset($_SESSION['user_level']) && $_SESSION['user_level'] == 1) {
+                    if (isset($_SESSION['user_level']) && $_SESSION['user_level'] == 0) {
                     ?>
                     <a class="btn btn-primary actionbutton updatebutton"
                        href="?page=admin_cms&ticket_id=<?php echo $_GET['result']; ?>">Bewerken</a></h1>

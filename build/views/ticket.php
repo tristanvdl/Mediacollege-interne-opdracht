@@ -1,8 +1,10 @@
 <?php
-$pushData = new Ticket($con);
-$keys = $pushData->PushTicketData();
+if (isset($_POST['onderwerp'])){
+    $pushData = new Ticket($con);
+    $keys = $pushData->PushTicketData();
+}
 if (!isset($_SESSION['user'])) {
-    echo "<div class='loginwarning'>Log in om een melding te maken</div>";
+    echo "<div class='loginwarning'><a href='?page=login'>Log in</a> om een melding te maken</div>";
 } else {
     ?>
     <div class="container ticket-content">

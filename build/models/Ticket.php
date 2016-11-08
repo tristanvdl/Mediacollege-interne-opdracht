@@ -18,7 +18,8 @@ class Ticket
             isset($_POST['locatie']) ? $_POST['locatie'] : '',
             isset($_POST['specifieke_locatie']) ? $_POST['specifieke_locatie'] : '',
             isset($_POST['spoed']) ? $_POST['spoed'] : '',
-            isset($_POST['dienst']) ? $_POST['dienst'] : ''
+            isset($_POST['dienst']) ? $_POST['dienst'] : '',
+            isset($_SESSION['user_id']) ? $_SESSION['user_id'] : '',
         );
         $statement = $this->db->prepare("
         INSERT
@@ -31,7 +32,8 @@ class Ticket
         progress,
         betrokken_werknemer,
         instuurder,
-        proceduren)
+        proceduren,
+        user_id)
         VALUES(
         :onderwerp,
         :beschrijving,
@@ -41,7 +43,8 @@ class Ticket
         '',
         '',
         'Henkie Henk',
-        :dienst)
+        :dienst,
+        $keys[6])
         ");
         $statement->bindParam(":onderwerp",$keys[0],PDO::PARAM_STR);
         $statement->bindParam(":beschrijving",$keys[1],PDO::PARAM_STR);
@@ -50,5 +53,9 @@ class Ticket
         $statement->bindParam(":spoed",$keys[4],PDO::PARAM_STR);
         $statement->bindParam(":dienst",$keys[5],PDO::PARAM_STR);
         return  $statement->execute() ? true : false;
+    }
+
+    public function getUserPersonalTickets(){
+
     }
 }

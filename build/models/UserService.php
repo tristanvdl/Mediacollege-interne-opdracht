@@ -6,6 +6,7 @@ class UserService
     private $email;
     private $password;
     private $user_level;
+    private $user_id;
 
     public function __construct($db)
     {
@@ -39,6 +40,7 @@ class UserService
         $statement->execute();
         $result = $statement->fetch();
         $this->user_level = $result['user_level'];
+        $this->user_id = $result['id'];
         return $result;
     }
 
@@ -46,7 +48,8 @@ class UserService
     {
         $user =  array(
             $_SESSION['user'] = $this->email,
-            $_SESSION['user_level'] = $this->user_level
+            $_SESSION['user_level'] = $this->user_level,
+            $_SESSION['user_id'] = $this->user_id
         );
         return $user;
     }

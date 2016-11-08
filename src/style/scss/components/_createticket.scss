@@ -53,4 +53,8 @@
   @media screen and (max-width:800px){
     font-size:2em;
   }
+  a {
+    text-decoration: underline;
+    color: $mapink;
+  }
 }
