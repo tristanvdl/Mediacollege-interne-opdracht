@@ -46,16 +46,33 @@ class Ticket
         :dienst,
         $keys[6])
         ");
-        $statement->bindParam(":onderwerp",$keys[0],PDO::PARAM_STR);
-        $statement->bindParam(":beschrijving",$keys[1],PDO::PARAM_STR);
-        $statement->bindParam(":locatie",$keys[2],PDO::PARAM_STR);
-        $statement->bindParam(":specifieke_locatie",$keys[3],PDO::PARAM_STR);
-        $statement->bindParam(":spoed",$keys[4],PDO::PARAM_STR);
-        $statement->bindParam(":dienst",$keys[5],PDO::PARAM_STR);
-        return  $statement->execute() ? true : false;
+        $statement->bindParam(":onderwerp", $keys[0], PDO::PARAM_STR);
+        $statement->bindParam(":beschrijving", $keys[1], PDO::PARAM_STR);
+        $statement->bindParam(":locatie", $keys[2], PDO::PARAM_STR);
+        $statement->bindParam(":specifieke_locatie", $keys[3], PDO::PARAM_STR);
+        $statement->bindParam(":spoed", $keys[4], PDO::PARAM_STR);
+        $statement->bindParam(":dienst", $keys[5], PDO::PARAM_STR);
+        return $statement->execute() ? true : false;
     }
 
-    public function getUserPersonalTickets(){
-
+    public function getUserPersonalTickets()
+    {
+        $value = $_SESSION['user_id'];
+        $statement = $this->db->prepare("
+        SELECT 
+        tickets.onderwerp, 
+        tickets.beschrijving, 
+        tickets.locatie, 
+        tickets.specifieke_locatie, 
+        tickets.spoed, tickets.time_stamp, 
+        tickets.time_stamp 
+        FROM tickets
+        LEFT JOIN users
+        ON tickets.user_id=users.id
+        WHERE tickets.user_id = :user_id");
+        $statement->bindParam(":user_id", $value, PDO::PARAM_STR);
+        $statement->execute();
+        $result = $statement->fetchAll(PDO::FETCH_ASSOC);
+        return $result;
     }
 }
