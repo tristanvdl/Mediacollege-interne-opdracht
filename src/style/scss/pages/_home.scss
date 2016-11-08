@@ -3,11 +3,6 @@
   height:100vh;
   margin: 0 auto;
 
-
-
-
-
-
   .search_wrapper {
     display: table-cell;
     vertical-align: middle;
@@ -26,7 +21,7 @@
       margin-left: auto;
       margin-right:auto;
       display:block;
-      
+
       button {
         width:70px;
         float:right;
@@ -74,5 +69,42 @@
         }
       }
     }
+  }
+}
+
+
+@media screen and (max-width:1000px){
+  .page-title-home {
+    font-size:45px !important;
+  }
+}
+@media screen and (max-width:800px){
+  .page-title-home {
+    font-size:40px !important;
+  }
+  .searchform {
+    width:500px !important;
+    .search {
+      width:440px !important;
+    }
+  }
+}
+@media screen and (max-width:585px){
+  .page-title-home {
+    font-size:30px !important;
+  }
+  .searchform {
+    width:400px !important;
+    .search{
+      width:220px !important;
+    }
+  }
+}
+@media screen and (max-width:585px){
+  .page-title-home {
+    font-size:30px !important;
+  }
+  .searchform {
+    width:300px !important;
   }
 }

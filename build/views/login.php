@@ -5,7 +5,8 @@ if (isset($_POST['submit_login'])) {
         $user = $userService->loginUser();
         echo("<script>window.location.assign(\"?page=home\")</script>");
     } else {
-        echo "Incorrect wachtwoord of email";
+        //echo "Incorrect wachtwoord of email";
+        $wronginfo = true;
     }
 }
 $action = isset($_GET['action']) ? $_GET['action'] : '';
@@ -17,23 +18,40 @@ if ($action == "logout") {
 <!-- <div class="container">
     <div class="row"> -->
 <form method="post" action="?page=login" autocomplete="off" class="loginform">
-    <h1> Login </h1>
     <table>
-        <tr>    
+        <tr>
             <th class="iconth"><i class="fa fa-user" aria-hidden="true"></i></th>
             <th class="inputth"><input type="email" name="email" placeholder="E-mail"></th>
         </tr>
+        <form method="post" action="?page=login" autocomplete="off" class="loginform">
+            <h1> Login </h1>
+            <?php
+            if (isset($wronginfo) && $wronginfo) {
+                echo "<p class=warning>Incorrect wachtwoord of email</p>";
+            }
+            ?>
+            <table>
+                <tr>
+                <tr class="seperator"></tr>
+                <tr>
+                    <th class="iconth"><i class="fa fa-key" aria-hidden="true"></i></th>
+                    <th class="inputth"><input type="password" name="password" placeholder="Wachtwoord"></th>
+                </tr>
+            </table>
 
-        <tr class="seperator"></tr>
+            <a href="?page=register">Geen account? Klik hier!</a>
+            <input type="submit" name="submit_login" class="btn btn-primary actionbutton loginbutton" value="Log In">
+        </form>
+        <!-- </div>
+                          <tr>
+                            <th class="iconth"><i class="fa fa-key" aria-hidden="true"></i></th>
+                            <th class="inputth"><input type="password" name="password" placeholder="Wachtwoord"></th>
+                          </tr>
+                        </table>
 
-        <tr>
-            <th class="iconth"><i class="fa fa-key" aria-hidden="true"></i></th>
-            <th class="inputth"><input type="password" name="password" placeholder="Wachtwoord"></th>
-        </tr>
-    </table>
-
-    <a href="?page=register">Geen account? Klik hier!</a>
-    <input type="submit" name="submit_login" class="btn btn-primary actionbutton loginbutton" value="Log In">
-</form>
-<!-- </div>
-</div> -->
+                      <a href="#" class="wwlink">Wachtwoord Vergeten?</a>
+                      <a href="?page=register" class="reglink">Registeren</a>
+                    <input type="submit" name="submit_login" class="btn btn-primary actionbutton loginbutton" value="Log In">
+                </form>
+            <!-- </div>
+        </div> -->

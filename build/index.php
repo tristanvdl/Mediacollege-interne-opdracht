@@ -8,7 +8,7 @@ $con = $db->getDB();
 $action = isset($_GET['page']) ? $_GET['page'] : 'homepage';
 
 
-//include 'views/header.php';
+include 'views/header.php';
 switch ($action) {
     case 'result':
       include 'views/result.php';

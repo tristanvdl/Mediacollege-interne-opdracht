@@ -1,5 +1,5 @@
-<div class="container">
-    <div class="row">
+<!-- <div class="container">
+    <div class="row"> -->
         <?php
         $userService = new UserService($con);
 
@@ -28,7 +28,7 @@
           <table>
             <?php
             if(isset($noMaEmail) && $noMaEmail){
-              echo "<p class='mailwarning'>Je hebt een ma-web e-mail adres nodig om te registreren</p>";
+              echo "<p class=warning>Je hebt een ma-web e-mail adres nodig om te registreren</p>";
             }
             ?>
             <tr>
@@ -45,28 +45,5 @@
             <input type="submit" name="submit_register"  class="btn btn-primary actionbutton loginbutton regbutton">
 
         </form>
-
-        <!--  -->
-        <!-- <form method="post" action="?page=login" autocomplete="off" class="loginform">
-                <h1> Login </h1>
-                <table>
-                  <tr>
-
-                    <th class="iconth"><i class="fa fa-user" aria-hidden="true"></i></th>
-                    <th class="inputth"><input type="email" name="email" placeholder="Gebruikersnaam"></th>
-                  </tr>
-
-                  <tr class="seperator"></tr>
-
-                  <tr>
-                    <th class="iconth"><i class="fa fa-key" aria-hidden="true"></i></th>
-                    <th class="inputth"><input type="password" name="password" placeholder="Wachtwoord"></th>
-                  </tr>
-                </table>
-
-              <a href="#">Wachtwoord Vergeten?</a>
-            <input type="submit" name="submit_login" class="btn btn-primary actionbutton loginbutton" value="Log In">
-        </form> -->
-        <!--  -->
-    </div>
-</div>
+    <!-- </div>
+</div> -->
