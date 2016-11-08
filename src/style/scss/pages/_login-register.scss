@@ -2,6 +2,8 @@
 
 }
 
+
+
 .loginform {
   font-family:"Akzid";
   width:100vw;
@@ -9,6 +11,10 @@
   text-align:center;
   margin-top:35vh;
   color:black;
+  .warning {
+    margin-bottom:10px !important;
+    color:$mapink !important;
+  }
   h1 {
     margin-bottom:20px;
     font-size:2.5em;
@@ -27,7 +33,6 @@
   }
   input[type=email]::-webkit-input-placeholder, input[type=password]::-webkit-input-placeholder{
     color:black;
-
   }
   a {
     display:block;
@@ -68,11 +73,6 @@
 
   .inputth, input[type=email], input[type=password]  {
     width:400px;
-  }
-
-  .mailwarning {
-    margin-bottom:10px;
-    color:$mapink;
   }
 
   .loginbutton {

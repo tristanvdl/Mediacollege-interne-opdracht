@@ -5,7 +5,8 @@ if (isset($_POST['submit_login'])) {
         $user = $userService->loginUser();
         echo("<script>window.location.assign(\"?page=home\")</script>");
     } else {
-        echo "Incorrect wachtwoord of email";
+        //echo "Incorrect wachtwoord of email";
+        $wronginfo = true;
     }
 }
 $action = isset($_GET['action']) ? $_GET['action'] : '';
@@ -18,6 +19,11 @@ if ($action == "logout"){
     <div class="row"> -->
         <form method="post" action="?page=login" autocomplete="off" class="loginform">
                 <h1> Login </h1>
+                <?php
+                if(isset($wronginfo) && $wronginfo){
+                  echo "<p class=warning>Incorrect wachtwoord of email</p>";
+                }
+                ?>
                 <table>
                   <tr>
 
