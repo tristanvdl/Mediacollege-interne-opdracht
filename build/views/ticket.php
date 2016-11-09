@@ -1,7 +1,8 @@
 <?php
-if (isset($_POST['onderwerp'])){
+if (isset($_POST['onderwerp'])) {
     $pushData = new Ticket($con);
     $keys = $pushData->PushTicketData();
+    echo("<script>window.location.assign(\"?page=user\")</script>");
 }
 if (!isset($_SESSION['user'])) {
     echo "<div class='loginwarning'><a href='?page=login'>Log in</a> om een melding te maken</div>";
@@ -19,10 +20,10 @@ if (!isset($_SESSION['user'])) {
                 </select><br>
                 <input type="text" name="specifieke_locatie" placeholder="Specifieke locatie"><br>
                 <select name="spoed" placeholder="spoed"><br>
-                    <option value="0" class="spoedoption">Direct</option>
-                    <option value="1" class="spoedoption">Vandaag</option>
-                    <option value="2" class="spoedoption">Binnen een week</option>
-                    <option value="3" class="spoedoption">Geen spoed</option>
+                    <option value="Direct" class="spoedoption">Direct</option>
+                    <option value="Vandaag" class="spoedoption">Vandaag</option>
+                    <option value="Binnen een week" class="spoedoption">Binnen een week</option>
+                    <option value="Geen spoed" class="spoedoption">Geen spoed</option>
                 </select><br>
                 <input type="hidden" name="dienst" value="">
                 <button form="cmsform" type="button" onclick="myform.submit()"

@@ -13,8 +13,7 @@
                     ?>
                     <h1>bestaat al</h1>
                     <?php
-                }
-                if ($_POST['password'] == "") {
+                }else if ($_POST['password'] == "") {
                     echo "voer een wachtwoord in";
                 } else {
                     $userService->registerUser();

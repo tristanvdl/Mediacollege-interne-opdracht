@@ -1,5 +1,6 @@
 <?php
 include 'models/Autoload.php';
+
 Autoload::register();
 
 $db = Database::getInstance();

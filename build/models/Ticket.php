@@ -20,6 +20,8 @@ class Ticket
             isset($_POST['spoed']) ? $_POST['spoed'] : '',
             isset($_POST['dienst']) ? $_POST['dienst'] : '',
             isset($_SESSION['user_id']) ? $_SESSION['user_id'] : '',
+            isset($_SESSION['user']) ? $_SESSION['user'] : '',
+            "Aangemaakt"
         );
         $statement = $this->db->prepare("
         INSERT
@@ -40,11 +42,11 @@ class Ticket
         :locatie,
         :specifieke_locatie,
         :spoed,
+        :progress,
         '',
-        '',
-        'Henkie Henk',
+        :instuurder,
         :dienst,
-        $keys[6])
+        :user_id)
         ");
         $statement->bindParam(":onderwerp", $keys[0], PDO::PARAM_STR);
         $statement->bindParam(":beschrijving", $keys[1], PDO::PARAM_STR);
@@ -52,6 +54,9 @@ class Ticket
         $statement->bindParam(":specifieke_locatie", $keys[3], PDO::PARAM_STR);
         $statement->bindParam(":spoed", $keys[4], PDO::PARAM_STR);
         $statement->bindParam(":dienst", $keys[5], PDO::PARAM_STR);
+        $statement->bindParam(":user_id", $keys[6], PDO::PARAM_STR);
+        $statement->bindParam(":instuurder", $keys[7], PDO::PARAM_STR);
+        $statement->bindParam(":progress",$keys[8], PDO::PARAM_STR);
         return $statement->execute() ? true : false;
     }
 
@@ -60,16 +65,18 @@ class Ticket
         $value = $_SESSION['user_id'];
         $statement = $this->db->prepare("
         SELECT 
-        tickets.onderwerp, 
-        tickets.beschrijving, 
-        tickets.locatie, 
-        tickets.specifieke_locatie, 
-        tickets.spoed, tickets.time_stamp, 
-        tickets.time_stamp 
+        tickets.onderwerp,
+        tickets.beschrijving,
+        tickets.locatie,
+        tickets.specifieke_locatie,
+        tickets.spoed,
+        tickets.time_stamp,
+        tickets.progress
         FROM tickets
         LEFT JOIN users
         ON tickets.user_id=users.id
-        WHERE tickets.user_id = :user_id");
+        WHERE tickets.user_id = :user_id
+        ORDER BY time_stamp DESC");
         $statement->bindParam(":user_id", $value, PDO::PARAM_STR);
         $statement->execute();
         $result = $statement->fetchAll(PDO::FETCH_ASSOC);
