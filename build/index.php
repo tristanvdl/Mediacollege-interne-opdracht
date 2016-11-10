@@ -35,6 +35,10 @@ switch ($action) {
         include 'views/user.php';
         break;
 
+    case 'ticket_overzicht':
+        include 'views/ticket_overzicht.php';
+        break;
+
     default:
         include 'views/home.php';
         break;
