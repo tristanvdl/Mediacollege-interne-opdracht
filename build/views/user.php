@@ -5,8 +5,9 @@ if (isset($_SESSION['user'])) {
 
     ?>
     <div class="container">
-        <table class="table table-bordered">
-            <tr>
+      <h1></h1>
+        <table class="table table-bordered tickettable">
+            <tr class="toprow">
                 <th>Procedure</th>
                 <th>Beschrijving</th>
                 <th>Locatie</th>

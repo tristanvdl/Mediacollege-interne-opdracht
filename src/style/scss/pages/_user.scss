@@ -1,0 +1,28 @@
+.container {
+  font-family:"Akzid";
+    h1 {
+      font-size:2em;
+      text-align:center;
+        margin-top:40vh;
+        margin-bottom:12px;
+    }
+  .tickettable {
+    font-size:1.1em;
+    .toprow {
+      th {
+        font-weight:bold;
+      }
+    }
+    tr {
+      th{
+
+      }
+    }
+
+  }
+  @media screen and (max-width:1000px){
+    .tickettable {
+      font-size:0.65em;
+    }
+  }
+}
