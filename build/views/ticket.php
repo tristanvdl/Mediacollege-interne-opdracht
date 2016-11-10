@@ -2,7 +2,7 @@
 if (isset($_POST['onderwerp'])) {
     $pushData = new Ticket($con);
     $keys = $pushData->PushTicketData();
-    
+    echo("<script>window.location.assign(\"?page=user\")</script>");
 }
 if (!isset($_SESSION['user'])) {
     echo "<div class='loginwarning'><a href='?page=login'>Log in</a> om een melding te maken</div>";

@@ -15,28 +15,28 @@
 </head>
 <body>
 
-<!--<div class="menu">-->
-<!--<!--    <a href="?page=home"><img src="assets/images/logosub.jpg" class="menuimg"></a>-->-->
-<!--<!--    <div class="topbar">-->-->
-<!--<!--        <strong>Spoedmelding?</strong> Bel direct naar: 020 1234567-->-->
-<!--<!--    </div>-->-->
-<!---->
-<!--    <div class="userthingy">-->
-<!--        <div class="userwrapper">-->
-<!--            <div class="textleft">-->
-<!--                --><?php //if (isset($_SESSION['user'])) { ?>
-<!--                    <p>--><?php //echo $_SESSION['user'] ?><!--<Br></p>-->
-<!--                    <a href="?page=login&action=logout">Uitloggen</a>-->
-<!--                --><?php //}else{?>
-<!--                    <p>Welkom!<Br></p>-->
-<!--                    <a href="?page=login">Inloggen</a>-->
-<!--                --><?php //} ?>
-<!--            </div>-->
-<!--            <div class="iconright">-->
-<!--                <i class="fa fa-user" aria-hidden="true"></i>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</div>-->
+<div class="menu">
+    <a href="?page=home"><img src="assets/images/logosub.jpg" class="menuimg"></a>
+    <div class="topbar">
+        <strong>Spoedmelding?</strong> Bel direct naar: 020 1234567
+    </div>
+
+    <div class="userthingy">
+        <div class="userwrapper">
+            <div class="textleft">
+                <?php if (isset($_SESSION['user'])) { ?>
+                    <p><?php echo $_SESSION['user'] ?><Br></p>
+                    <a href="?page=login&action=logout">Uitloggen</a>
+                <?php }else{?>
+                    <p>Welkom!<Br></p>
+                    <a href="?page=login">Inloggen</a>
+                <?php } ?>
+            </div>
+            <div class="iconright">
+                <i class="fa fa-user" aria-hidden="true"></i>
+            </div>
+        </div>
+    </div>
+</div>
 
 <div class="content">
