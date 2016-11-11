@@ -83,9 +83,37 @@ class Ticket
 
     public function getAllTickets()
     {
-        $statement = $this->db->prepare("SELECT * FROM tickets");
+        $statement = $this->db->prepare("SELECT * FROM tickets ORDER BY time_stamp DESC");
         $statement->execute();
         $result = $statement->fetchAll(PDO::FETCH_ASSOC);
         return $result;
+    }
+
+    public function updateTicket()
+    {
+        $keys = array
+        (
+            $_POST['betrokken_werknemer'],
+            $_POST['status'],
+            $_POST['ticket_id']
+        );
+        $time_update = "";
+
+        if ($_POST['status'] == 'Afgehandeld'){
+            $time_update = ",tijd_afgehandeld=CURRENT_TIMESTAMP";
+        } else {
+            $time_update = " ";
+        }
+        $statement = $this->db->prepare("
+        UPDATE tickets 
+        SET 
+        betrokken_werknemer=:betrokken_werknemer, 
+        progress=:status
+        $time_update
+        WHERE id=:id");
+        $statement->bindParam(":betrokken_werknemer",$keys[0],PDO::PARAM_STR);
+        $statement->bindParam(":status",$keys[1],PDO::PARAM_STR);
+        $statement->bindParam(":id",$keys[2],PDO::PARAM_INT);
+        return $statement->execute() ? true : false;
     }
 }
