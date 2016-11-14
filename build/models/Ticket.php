@@ -95,7 +95,7 @@ class Ticket
         (
             $_POST['betrokken_werknemer'],
             $_POST['status'],
-            $_POST['ticket_id']
+            $_POST['ticket_id'],
         );
         $time_update = "";
 
@@ -115,5 +115,27 @@ class Ticket
         $statement->bindParam(":status",$keys[1],PDO::PARAM_STR);
         $statement->bindParam(":id",$keys[2],PDO::PARAM_INT);
         return $statement->execute() ? true : false;
+    }
+    
+    public function deleteTicket()
+    {
+        $key = $_GET['ticket'];
+        $statement = $this->db->prepare("DELETE FROM tickets WHERE id=:id");
+        $statement->bindParam(":id",$key,PDO::PARAM_INT);
+        return $statement->execute()? true: false;
+    }
+    
+    public function ticketSort()
+    {
+        $keys = array 
+        (
+            $_POST['locatie']
+        );
+        $statement = $this->db->prepare("SELECT * FROM tickets WHERE locatie=:locatie ORDER BY time_stamp DESC");
+        $statement->bindParam(":locatie",$keys[0],PDO::PARAM_STR);
+        $statement->execute();
+        $result = $statement->fetchAll(PDO::FETCH_ASSOC);
+        return $result;
+
     }
 }

@@ -33,5 +33,5 @@ if (isset($_SESSION['user'])) {
     </div>
     <?php
 } else {
-    echo "dacht het niet he";
+    echo("<script>window.location.assign(\"?page=login\")</script>");
 } ?>
