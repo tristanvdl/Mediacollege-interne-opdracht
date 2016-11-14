@@ -1,13 +1,28 @@
+.usercontent {
+    margin-top: 50vh;
+    @media screen and (max-width:800px){
+        margin-top: 35vh;
+    }
+    @media screen and (min-width:1400px){
+        margin-top: 25vh;
+    }
+}
+
+
+
 .container {
   font-family:"Akzid";
+  height:100vh;
     h1 {
       font-size:2em;
       text-align:center;
-        margin-top:40vh;
-        margin-bottom:12px;
+      margin-bottom:12px;
     }
   .tickettable {
     font-size:1.1em;
+    position: absolute;
+    top:50%;
+    vertical-align: middle !important;
     .toprow {
       th {
         font-weight:bold;
@@ -18,11 +33,11 @@
 
       }
     }
-
-  }
-  @media screen and (max-width:1000px){
-    .tickettable {
-      font-size:0.65em;
+    tr, tr {
+        border: none;
+        text-align: left;
+        padding: 8px;
     }
+
   }
 }

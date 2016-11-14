@@ -7,8 +7,11 @@
     display: table-cell;
     vertical-align: middle;
     .page-title-home {
+        h1 {
+            font-size: 3em;
+        }
       text-align:center;
-      font-size:3.5em;
+      // font-size:3.5em;
       font-weight:bolder;
       font-family:"Akzid-bold";
       padding-bottom: 10px;
@@ -74,14 +77,14 @@
 
 
 @media screen and (max-width:1000px){
-  .page-title-home {
-    font-size:45px !important;
-  }
+  // .page-title-home {
+  //   font-size:45px !important;
+  // }
 }
 @media screen and (max-width:800px){
-  .page-title-home {
-    font-size:40px !important;
-  }
+  // .page-title-home {
+  //   font-size:40px !important;
+  // }
   .searchform {
     width:500px !important;
     .search {
@@ -90,9 +93,9 @@
   }
 }
 @media screen and (max-width:585px){
-  .page-title-home {
-    font-size:30px !important;
-  }
+  // .page-title-home {
+  //   font-size:30px !important;
+  // }
   .searchform {
     width:400px !important;
     .search{
@@ -101,9 +104,9 @@
   }
 }
 @media screen and (max-width:585px){
-  .page-title-home {
-    font-size:30px !important;
-  }
+  // .page-title-home {
+  //   font-size:30px !important;
+  // }
   .searchform {
     width:300px !important;
   }
