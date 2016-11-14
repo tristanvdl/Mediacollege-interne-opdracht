@@ -20,6 +20,7 @@
                         }
                         ?>
                     </h1>
+                    <p>Staat je probleem er niet bij? <a href="?page=ticket">Klik hier!</a></p>
                 </div>
                 <div class="col-md-12">
                     <form class="searchform" method="post" action="?page=results" autocomplete="off">

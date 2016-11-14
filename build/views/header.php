@@ -25,7 +25,7 @@
         <div class="userwrapper">
             <div class="textleft">
                 <?php if (isset($_SESSION['user'])) { ?>
-                    <p class="username_when_loggedin"><?php echo $_SESSION['user'] ?><Br></p>
+                    <p><?php echo $_SESSION['user'] ?><Br></p>
                     <a href="?page=login&action=logout">Uitloggen</a>
                 <?php }else{?>
                     <p>Welkom!<Br></p>
