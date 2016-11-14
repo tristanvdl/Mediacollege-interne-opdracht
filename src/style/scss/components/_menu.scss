@@ -71,9 +71,8 @@ strong {
   width: 100%;
   font-size: 20px;//background-color: lightgray;
   height: 100px;
-  position: fixed;
-  bottom:5px;
-  right:5px;
+  position: relative;
+  top: -99%;
   @media screen and (max-width: 1200px){
     & {
       // position:fixed;
@@ -81,7 +80,10 @@ strong {
       // right:10px;
       // transform: translateZ(0);
       // -webkit-transform: translateZ(0);
-      margin-top:89vh;
+      position:fixed;
+      top: auto;
+      bottom: 5px;
+      right: 5px;
       height:50px;
     }
 
