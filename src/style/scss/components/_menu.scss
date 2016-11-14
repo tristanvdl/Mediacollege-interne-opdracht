@@ -88,15 +88,20 @@ strong {
   @media screen and (max-width: 800px){
     margin-top:107vh;
   }
+  .username_when_loggedin{
+      margin-left: -51px;
+      width: auto;
+  }
   .userwrapper{
     width: 200px;
     float: right;
     .textleft {
       width: 150px;
-      line-height: 25px;
+      line-height: 24px;
       display: block;
       //background-color: lightblue;
       text-align: right;
+      //border-right: 1px solid blue;
       p {
 
       }

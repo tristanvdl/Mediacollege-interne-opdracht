@@ -10,11 +10,9 @@
                 $noMaEmail = false;
                 $email = $userService->checkIfExist();
                 if ($email['email'] == $_POST['email']) {
-                    ?>
-                    <h1>bestaat al</h1>
-                    <?php
+                    $alreadyexists = true;
                 }else if ($_POST['password'] == "") {
-                    echo "voer een wachtwoord in";
+                    $nopwentered = true;
                 } else {
                     $userService->registerUser();
                     echo("<script>window.location.assign(\"?page=login\")</script>");
@@ -28,6 +26,12 @@
             <?php
             if(isset($noMaEmail) && $noMaEmail){
               echo "<p class=warning>Je hebt een ma-web e-mail adres nodig om te registreren</p>";
+            }
+            else if(isset($alreadyexists) && $alreadyexists){
+              echo "<p class=warning>Dat e-mail adres is al in gebruik.</p>";
+            }
+            else if(isset($nopwentered) && $nopwentered){
+              echo "<p class=warning>Voer een wachtwoord in.</p>";
             }
             ?>
             <tr>
