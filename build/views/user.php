@@ -5,21 +5,29 @@ if (isset($_SESSION['user'])) {
 
     ?>
     <div class="container-fluid usercontent">
-      <h1></h1>
-        <div class="tablewrapper" style="overflow-x:auto;">
-        <table class="table table-bordered tickettable">
+        <h1>Mijn tickets</h1>
+        <div style="overflow-x:auto;">
+
+        <table class="tickettable">
+
             <tr class="toprow">
-                <th>Procedure</th>
-                <th>Beschrijving</th>
-                <th>Locatie</th>
-                <th>Specifieke Locatie</th>
-                <th>Spoed</th>
-                <th>Tijd aangemaakt</th>
-                <th>Ticket progress</th>
+
+                <td class="number"> </td>
+                <td><div class="whitespace"> </div>Procedure</td>
+                <td>Beschrijving</td>
+                <td>Locatie</td>
+                <td>Specifieke Locatie</td>
+                <td>Spoed</td>
+                <td>Tijd aangemaakt</td>
+                <td>Ticket progress</td>
             </tr>
-            <?php foreach ($personal_tickets as $value) { ?>
+            <?php
+            $count = 1;
+            foreach ($personal_tickets as $value) { ?>
                 <tr>
-                    <td><?php echo $value['onderwerp'] ?></td>
+
+                    <td class="number"><?php echo $count; ?></td>
+                    <td><div class="whitespace"> </div><?php echo $value['onderwerp'] ?></td>
                     <td><?php echo $value['beschrijving'] ?></td>
                     <td><?php echo $value['locatie'] ?></td>
                     <td><?php echo $value['specifieke_locatie'] ?></td>
@@ -27,7 +35,7 @@ if (isset($_SESSION['user'])) {
                     <td><?php echo $value['time_stamp'] ?></td>
                     <td><?php echo $value['progress'] ?></td>
                 </tr>
-            <?php } ?>
+            <?php $count++; } ?>
         </table>
 
         </div>

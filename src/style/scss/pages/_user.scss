@@ -10,34 +10,48 @@
 
 
 
-.container {
+.container-fluid {
   font-family:"Akzid";
   height:100vh;
+  .tablewrapper {
+      overflow-x: auto;
+  }
+  .number {
+      border-right:1px solid black !important;
+  }
+  .whitespace {
+      width: 5px;
+      display: inline-block;
+  }
     h1 {
       font-size:2em;
       text-align:center;
-      margin-bottom:12px;
+      margin-bottom::20px;
+      margin-top: -55px;
+      top:35%;
+      left:45%;
+      @media screen and (max-width:650px){
+         &{left:35%;}
+      }
+    }
+    td {
+        border-top: none !important;
+        padding: 3px;
+        white-space: nowrap;
+        overflow: hidden;
     }
   .tickettable {
     font-size:1.1em;
-    position: absolute;
-    top:50%;
     vertical-align: middle !important;
+    border:none;
+    width:96vw;
+    }
     .toprow {
-      th {
         font-weight:bold;
-      }
+        td {
+        border-bottom: 1px solid black;
     }
-    tr {
-      th{
 
-      }
-    }
-    tr, tr {
-        border: none;
-        text-align: left;
-        padding: 8px;
-    }
 
   }
 }
