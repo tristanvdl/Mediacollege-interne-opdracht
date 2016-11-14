@@ -4,8 +4,9 @@ if (isset($_SESSION['user'])) {
     $personal_tickets = $ticket->getUserPersonalTickets();
 
     ?>
-    <div class="container">
+    <div class="container-fluid usercontent">
       <h1></h1>
+        <div class="tablewrapper" style="overflow-x:auto;">
         <table class="table table-bordered tickettable">
             <tr class="toprow">
                 <th>Procedure</th>
@@ -28,6 +29,7 @@ if (isset($_SESSION['user'])) {
                 </tr>
             <?php } ?>
         </table>
+        </div>
     </div>
     <?php
 } else {
