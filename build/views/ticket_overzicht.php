@@ -19,35 +19,44 @@ if (isset($_SESSION['user']) && $_SESSION['user_level'] == 0) {
         echo("<script>window.location.assign(\"?page=ticket_overzicht\")</script>");
     }
     ?>
-    <div class="container-custom">
+    <div class="container-fluid usercontent">
         <form action="?page=ticket_overzicht" autocomplete="off" method="POST">
             <div class="row">
-                <h2>Sorteer op locatie</h2></br>
-                <select name="locatie">
-                    <option>Kies locatie</option>
-                    <option value="Contactweg">Contactweg</option>
-                    <option value="Dintelstraat">Dintelstraat</option>
-                </select>
-                <input type="submit" value="sorteer">
+                <!-- start sort -->
+                <div class="sorting">
+                    <h2>Sorteer op locatie:</h2>
+                    <select name="locatie">
+                        <option>Kies locatie</option>
+                        <option value="Contactweg">Contactweg</option>
+                        <option value="Dintelstraat">Dintelstraat</option>
+                    </select>
+                    <input type="submit" value="sorteer" class="btn btn-primary actionbutton sortbutton">
+                </div>
+                <!-- end sort -->
             </div>
             <div class="row">
                 <div style="overflow-x:auto;">
-                    <table class="table table-bordered">
-                        <tr>
-                            <th>Procedure</th>
-                            <th>Beschrijving</th>
-                            <th>Instuurder</th>
-                            <th>Locatie</th>
-                            <th>Specifieke Locatie</th>
-                            <th>Spoed</th>
-                            <th>Tijd aangemaakt</th>
-                            <th>Tijd afgehandeld</th>
-                            <th>Betrokken werknemer</th>
-                            <th>Ticket progress</th>
+                    <table class="tickettable">
+                        <tr class="toprow">
+                            <td class="number"> </td>
+                            <td><div class="whitespace"> </div>Procedure</td>
+                            <td>Beschrijving</td>
+                            <td>Instuurder</td>
+                            <td>Locatie</td>
+                            <td>Specifieke Locatie</td>
+                            <td>Spoed</td>
+                            <td>Tijd aangemaakt</td>
+                            <td>Tijd afgehandeld</td>
+                            <td>Betrokken werknemer</td>
+                            <td>Ticket progress</td>
                         </tr>
-                        <?php foreach ($result as $value) { ?>
+                        <?php
+                        $count = 1;
+                        foreach ($result as $value) { ?>
                             <tr>
-                                <td><?php echo $value['onderwerp'] ?></td>
+                                <td class="number"><?php echo $count; ?></td>
+                                <?php $count++; ?>
+                                <td><div class="whitespace"><?php echo $value['onderwerp'] ?></td>
                                 <td><?php echo $value['beschrijving'] ?></td>
                                 <td><?php echo $value['instuurder'] ?></td>
                                 <td><?php echo $value['locatie'] ?></td>

@@ -1,4 +1,33 @@
-.container-custom {
+.container-fluid {
   width: 80vw;
   margin: 0 auto;
+}
+
+.sorting {
+    margin-top: 45vh;
+    margin-bottom: 15px;
+    h2 {
+        font-weight: bolder;
+    }
+    select {
+        border: none;
+        background-color: #EEE;
+        padding: 10px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    input[type=submit]{
+
+    }
+    h2, select, input {
+        display: inline;
+    }
+
+    .sortbutton {
+        padding: 10px;
+        padding-left: 15px;
+        padding-right: 15px;
+        font-size: 1em;
+        margin-left: 10px;
+    }
 }
